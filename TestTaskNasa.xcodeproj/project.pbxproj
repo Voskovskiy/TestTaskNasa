@@ -14,25 +14,21 @@
 		8C5E94BC2413D6F200AF9E10 /* NASAAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C5E94BB2413D6F200AF9E10 /* NASAAPI.swift */; };
 		8C5E94BF2413D8AC00AF9E10 /* NASAAPI+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C5E94BE2413D8AC00AF9E10 /* NASAAPI+Extensions.swift */; };
 		8C5E94C12413FF5200AF9E10 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C5E94C02413FF5200AF9E10 /* String+Extensions.swift */; };
-		8C5E94C7241406D200AF9E10 /* AbstractError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C5E94C6241406D200AF9E10 /* AbstractError.swift */; };
-		8C9D1C6B24152E5900DBDC8B /* ImageCacher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C9D1C6A24152E5900DBDC8B /* ImageCacher.swift */; };
-		8C9D1C6D24155E6600DBDC8B /* RequestTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C9D1C6C24155E6600DBDC8B /* RequestTable.swift */; };
+		8C92ECBD241A42C200A547D1 /* CGFoat+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C92ECBC241A42C200A547D1 /* CGFoat+Extensions.swift */; };
+		8C92EF382418C98300929E56 /* PhotoLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C92EF372418C98300929E56 /* PhotoLoader.swift */; };
+		8C92EF3D2418ECB700929E56 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 8C92EF3C2418ECB700929E56 /* Kingfisher */; };
 		8CA6E399240D68A5007E5526 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA6E398240D68A5007E5526 /* AppDelegate.swift */; };
 		8CA6E39B240D68A5007E5526 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA6E39A240D68A5007E5526 /* SceneDelegate.swift */; };
 		8CA6E39D240D68A5007E5526 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA6E39C240D68A5007E5526 /* MainViewController.swift */; };
 		8CA6E3A0240D68A5007E5526 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8CA6E39E240D68A5007E5526 /* Main.storyboard */; };
 		8CA6E3A2240D68AA007E5526 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8CA6E3A1240D68AA007E5526 /* Assets.xcassets */; };
 		8CA6E3A5240D68AA007E5526 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8CA6E3A3240D68AA007E5526 /* LaunchScreen.storyboard */; };
-		8CA6E3B2240FA538007E5526 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 8CA6E3B1240FA538007E5526 /* RealmSwift */; };
 		8CA6E3B5240FA697007E5526 /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = 8CA6E3B4240FA697007E5526 /* Moya */; };
 		8CCEB58D2416B3ED00055B4D /* Rover.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CCEB58C2416B3ED00055B4D /* Rover.swift */; };
 		8CCEB58F2416E34500055B4D /* PhotoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CCEB58E2416E34500055B4D /* PhotoTableViewController.swift */; };
 		8CCEB5912416E4AA00055B4D /* Camera.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CCEB5902416E4AA00055B4D /* Camera.swift */; };
 		8CCEB5932416F03800055B4D /* PhotoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CCEB5922416F03800055B4D /* PhotoTableViewCell.swift */; };
 		8CCEB5952416F2CF00055B4D /* TableView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CCEB5942416F2CF00055B4D /* TableView+Extensions.swift */; };
-		8CD3FEF3240FB55D00FE2A58 /* RoverObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CD3FEF2240FB55D00FE2A58 /* RoverObject.swift */; };
-		8CD3FEF5240FB6A800FE2A58 /* CameraObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CD3FEF4240FB6A800FE2A58 /* CameraObject.swift */; };
-		8CD3FEF7240FB6EA00FE2A58 /* PhotoObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CD3FEF6240FB6EA00FE2A58 /* PhotoObject.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,9 +39,8 @@
 		8C5E94BB2413D6F200AF9E10 /* NASAAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NASAAPI.swift; sourceTree = "<group>"; };
 		8C5E94BE2413D8AC00AF9E10 /* NASAAPI+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NASAAPI+Extensions.swift"; sourceTree = "<group>"; };
 		8C5E94C02413FF5200AF9E10 /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
-		8C5E94C6241406D200AF9E10 /* AbstractError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbstractError.swift; sourceTree = "<group>"; };
-		8C9D1C6A24152E5900DBDC8B /* ImageCacher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCacher.swift; sourceTree = "<group>"; };
-		8C9D1C6C24155E6600DBDC8B /* RequestTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestTable.swift; sourceTree = "<group>"; };
+		8C92ECBC241A42C200A547D1 /* CGFoat+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGFoat+Extensions.swift"; sourceTree = "<group>"; };
+		8C92EF372418C98300929E56 /* PhotoLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoLoader.swift; sourceTree = "<group>"; };
 		8CA6E395240D68A5007E5526 /* TestTaskNasa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestTaskNasa.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8CA6E398240D68A5007E5526 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8CA6E39A240D68A5007E5526 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -59,9 +54,6 @@
 		8CCEB5902416E4AA00055B4D /* Camera.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Camera.swift; sourceTree = "<group>"; };
 		8CCEB5922416F03800055B4D /* PhotoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoTableViewCell.swift; sourceTree = "<group>"; };
 		8CCEB5942416F2CF00055B4D /* TableView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TableView+Extensions.swift"; sourceTree = "<group>"; };
-		8CD3FEF2240FB55D00FE2A58 /* RoverObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoverObject.swift; sourceTree = "<group>"; };
-		8CD3FEF4240FB6A800FE2A58 /* CameraObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraObject.swift; sourceTree = "<group>"; };
-		8CD3FEF6240FB6EA00FE2A58 /* PhotoObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoObject.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,8 +61,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8C92EF3D2418ECB700929E56 /* Kingfisher in Frameworks */,
 				8CA6E3B5240FA697007E5526 /* Moya in Frameworks */,
-				8CA6E3B2240FA538007E5526 /* RealmSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -92,27 +84,9 @@
 				8C5E94C02413FF5200AF9E10 /* String+Extensions.swift */,
 				8CCEB5942416F2CF00055B4D /* TableView+Extensions.swift */,
 				0D8B655F24171B5A005B7B7B /* UIViewController+Extensions.swift */,
+				8C92ECBC241A42C200A547D1 /* CGFoat+Extensions.swift */,
 			);
 			path = Extentions;
-			sourceTree = "<group>";
-		};
-		8C5E94C5241406C400AF9E10 /* Components */ = {
-			isa = PBXGroup;
-			children = (
-				8C5E94C6241406D200AF9E10 /* AbstractError.swift */,
-				8C9D1C6A24152E5900DBDC8B /* ImageCacher.swift */,
-			);
-			path = Components;
-			sourceTree = "<group>";
-		};
-		8C600B372410FBBF004F765B /* Database */ = {
-			isa = PBXGroup;
-			children = (
-				8CD3FEF6240FB6EA00FE2A58 /* PhotoObject.swift */,
-				8CD3FEF2240FB55D00FE2A58 /* RoverObject.swift */,
-				8CD3FEF4240FB6A800FE2A58 /* CameraObject.swift */,
-			);
-			path = Database;
 			sourceTree = "<group>";
 		};
 		8C600B382410FBC6004F765B /* Network */ = {
@@ -122,6 +96,14 @@
 				8C5E94BE2413D8AC00AF9E10 /* NASAAPI+Extensions.swift */,
 			);
 			path = Network;
+			sourceTree = "<group>";
+		};
+		8C92EF362418C97600929E56 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				8C92EF372418C98300929E56 /* PhotoLoader.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 		8CA6E38C240D68A5007E5526 = {
@@ -143,14 +125,13 @@
 		8CA6E397240D68A5007E5526 /* TestTaskNasa */ = {
 			isa = PBXGroup;
 			children = (
-				8C5E94C5241406C400AF9E10 /* Components */,
+				8C92EF362418C97600929E56 /* Services */,
 				8C5E94BD2413D86100AF9E10 /* Extentions */,
 				8CA6E3AC240FA357007E5526 /* Root */,
 				8CA6E3AD240FA376007E5526 /* Resources */,
 				8CA6E3AF240FA3A7007E5526 /* Model */,
 				8CA6E3AE240FA39E007E5526 /* Controllers */,
 				0D93E9AA2417016E00A5A55A /* Views */,
-				8C600B372410FBBF004F765B /* Database */,
 				8C600B382410FBC6004F765B /* Network */,
 				8CA6E396240D68A5007E5526 /* Products */,
 			);
@@ -192,7 +173,6 @@
 			children = (
 				8CCEB58C2416B3ED00055B4D /* Rover.swift */,
 				8CCEB5902416E4AA00055B4D /* Camera.swift */,
-				8C9D1C6C24155E6600DBDC8B /* RequestTable.swift */,
 				0D8B655724170AE8005B7B7B /* Photo.swift */,
 			);
 			path = Model;
@@ -215,8 +195,8 @@
 			);
 			name = TestTaskNasa;
 			packageProductDependencies = (
-				8CA6E3B1240FA538007E5526 /* RealmSwift */,
 				8CA6E3B4240FA697007E5526 /* Moya */,
+				8C92EF3C2418ECB700929E56 /* Kingfisher */,
 			);
 			productName = TestTaskNasa;
 			productReference = 8CA6E395240D68A5007E5526 /* TestTaskNasa.app */;
@@ -249,6 +229,7 @@
 			packageReferences = (
 				8CA6E3B0240FA538007E5526 /* XCRemoteSwiftPackageReference "realm-cocoa" */,
 				8CA6E3B3240FA697007E5526 /* XCRemoteSwiftPackageReference "Moya" */,
+				8C92EF3B2418ECB600929E56 /* XCRemoteSwiftPackageReference "Kingfisher" */,
 			);
 			productRefGroup = 8CA6E396240D68A5007E5526 /* Products */;
 			projectDirPath = "";
@@ -277,27 +258,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8CD3FEF7240FB6EA00FE2A58 /* PhotoObject.swift in Sources */,
 				0D8B655C241710FD005B7B7B /* ImageView.swift in Sources */,
+				8C92ECBD241A42C200A547D1 /* CGFoat+Extensions.swift in Sources */,
 				0D8B655E241718CA005B7B7B /* PhotoViewController.swift in Sources */,
 				8C5E94BC2413D6F200AF9E10 /* NASAAPI.swift in Sources */,
 				8CCEB5952416F2CF00055B4D /* TableView+Extensions.swift in Sources */,
 				8C5E94BF2413D8AC00AF9E10 /* NASAAPI+Extensions.swift in Sources */,
-				8CD3FEF3240FB55D00FE2A58 /* RoverObject.swift in Sources */,
 				8C5E94C12413FF5200AF9E10 /* String+Extensions.swift in Sources */,
-				8CD3FEF5240FB6A800FE2A58 /* CameraObject.swift in Sources */,
-				8C5E94C7241406D200AF9E10 /* AbstractError.swift in Sources */,
 				0D8B656024171B5A005B7B7B /* UIViewController+Extensions.swift in Sources */,
 				8CA6E39D240D68A5007E5526 /* MainViewController.swift in Sources */,
 				8CCEB58F2416E34500055B4D /* PhotoTableViewController.swift in Sources */,
 				8CA6E399240D68A5007E5526 /* AppDelegate.swift in Sources */,
 				8CCEB5932416F03800055B4D /* PhotoTableViewCell.swift in Sources */,
 				0D8B655824170AE8005B7B7B /* Photo.swift in Sources */,
-				8C9D1C6B24152E5900DBDC8B /* ImageCacher.swift in Sources */,
 				8CCEB5912416E4AA00055B4D /* Camera.swift in Sources */,
-				8C9D1C6D24155E6600DBDC8B /* RequestTable.swift in Sources */,
 				8CA6E39B240D68A5007E5526 /* SceneDelegate.swift in Sources */,
 				8CCEB58D2416B3ED00055B4D /* Rover.swift in Sources */,
+				8C92EF382418C98300929E56 /* PhotoLoader.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -497,6 +474,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		8C92EF3B2418ECB600929E56 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.13.2;
+			};
+		};
 		8CA6E3B0240FA538007E5526 /* XCRemoteSwiftPackageReference "realm-cocoa" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/realm/realm-cocoa.git";
@@ -516,10 +501,10 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		8CA6E3B1240FA538007E5526 /* RealmSwift */ = {
+		8C92EF3C2418ECB700929E56 /* Kingfisher */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 8CA6E3B0240FA538007E5526 /* XCRemoteSwiftPackageReference "realm-cocoa" */;
-			productName = RealmSwift;
+			package = 8C92EF3B2418ECB600929E56 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
 		};
 		8CA6E3B4240FA697007E5526 /* Moya */ = {
 			isa = XCSwiftPackageProductDependency;

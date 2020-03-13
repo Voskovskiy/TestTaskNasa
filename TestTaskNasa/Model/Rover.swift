@@ -29,21 +29,21 @@ class Rover {
         cameras: [.fhaz, .rhaz, .mast, .chemcam, .mahli, .mardi, .navcam],
         minDate: date("2012-08-06"),
         maxDate: date("2019-09-28")
-        )
+    )
     
     static let opportunity = Rover(
         name: "Opportunity",
         cameras: [.fhaz, .rhaz, .navcam, .pancam, .minites],
         minDate: date("2004-01-25"),
         maxDate: date("2018-06-11")
-        )
+    )
     
     static let spirit = Rover(
         name: "Spirit",
         cameras: [.fhaz, .rhaz, .navcam, .pancam, .minites],
         minDate: date("2004-01-04"),
         maxDate: date("2010-03-21")
-        )
+    )
 }
 
 fileprivate let date = NASAAPI.date

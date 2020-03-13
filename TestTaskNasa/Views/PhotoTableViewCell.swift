@@ -7,11 +7,16 @@
 //
 
 import UIKit
-import Moya
+import Kingfisher
 
 class PhotoTableViewCell: UITableViewCell {
     
-    let photoImageView = ImageView()
+    private let roverLabel = UILabel()
+    private let cameraLabel = UILabel()
+    private let dateLabel = UILabel()
+    private let photoImageView = ImageView()
+    private let hStackView = UIStackView()
+    private let vStackView = UIStackView()
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -23,21 +28,46 @@ class PhotoTableViewCell: UITableViewCell {
         return nil
     }
     
+    func configure(url: URL, rover: String, camera: String, date: String) {
+        roverLabel.text = rover
+        cameraLabel.text = camera
+        dateLabel.text = date
+    
+        photoImageView.kf.indicatorType = .activity
+        photoImageView.kf.setImage(with: url)
+    }
+    
     private func makeLayout() {
         
         photoImageView.contentMode = .scaleAspectFit
-        contentView.addSubview(photoImageView)
-        photoImageView.translatesAutoresizingMaskIntoConstraints = false
+        
+        hStackView.axis = .horizontal
+        hStackView.spacing = .margin * 2
+        vStackView.axis = .vertical
+        vStackView.distribution = .fillEqually
+        
+        [hStackView, vStackView].forEach {
+            contentView.addSubview($0)
+            $0.translatesAutoresizingMaskIntoConstraints = false
+        }
+        
+        [photoImageView, vStackView]
+            .forEach(hStackView.addArrangedSubview)
+        
+        [roverLabel, cameraLabel, dateLabel]
+            .forEach(vStackView.addArrangedSubview)
         
         NSLayoutConstraint.activate([
-            photoImageView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 8),
-            photoImageView.leftAnchor.constraint(equalTo: contentView.leftAnchor),
-            photoImageView.rightAnchor.constraint(equalTo: contentView.rightAnchor),
-            photoImageView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -8)
+            hStackView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: .margin),
+            hStackView.leftAnchor.constraint(equalTo: contentView.leftAnchor, constant: .margin),
+            hStackView.rightAnchor.constraint(equalTo: contentView.rightAnchor, constant: -.margin),
+            hStackView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -.margin),
+            {
+                let height = photoImageView.heightAnchor.constraint(equalToConstant: 100)
+                height.priority -= 1
+                return height
+            }(),
+            photoImageView.widthAnchor.constraint(equalTo: photoImageView.heightAnchor)
         ])
-        
-        let heightConstraint = photoImageView.heightAnchor.constraint(equalToConstant: 100)
-        heightConstraint.priority -= 1
-        heightConstraint.isActive = true
     }
 }

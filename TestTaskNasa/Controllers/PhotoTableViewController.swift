@@ -8,20 +8,14 @@
 
 import UIKit
 import Moya
+import Kingfisher
 
 class PhotoTableViewController: UITableViewController {
     
-    private let rover: Rover
-    private let camera: Camera
-    private let date: Date
-    
     private var photos = [Photo]()
     
-    init(rover: Rover, camera: Camera, date: Date) {
-        self.rover = rover
-        self.camera = camera
-        self.date = date
-        
+    init(photors: [Photo]) {
+        self.photos = photors
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -31,32 +25,8 @@ class PhotoTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         tableView.tableFooterView = UIView() // hides empty cells
-        loadPhotos()
-    }
-    
-    private func loadPhotos() {
-        
-        let provider = MoyaProvider<NASAAPI>()
-        provider.request(.listPhotos(rover: rover.name, camera: camera.name, date: NASAAPI.string(date), page: 1)) { [weak self] result in
-            guard let self = self else { return }
-            
-            switch result {
-            case .success(let response):
-                self.photos = Photo.parse((try? response.mapJSON()) as Any)
-                
-            case .failure:
-                self.show(message: "Failed to load photos")
-            }
-            
-            DispatchQueue.main.async {
-                if self.photos.isEmpty {
-                    self.show(message: "No photos")
-                }
-                self.tableView.reloadData()
-            }
-        }
     }
     
     // MARK: - TableView
@@ -70,27 +40,30 @@ class PhotoTableViewController: UITableViewController {
         let photo = photos[indexPath.row]
         let cell: PhotoTableViewCell = tableView.dequeueReusableCell(for: indexPath)
         
-        if let data = photo.data {
-            cell.photoImageView.image = UIImage(data: data)
-        }
-        else {
-            cell.photoImageView.setImage(url: photo.url) { data in
-                photo.data = data
-            }
-        }
+        cell.configure(
+            url: photo.url,
+            rover: photo.rover,
+            camera: photo.camera,
+            date: photo.date
+        )
         
         return cell
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        let photo = photos[indexPath.row]
-        guard
-            let data = photo.data,
-            let image = UIImage(data: data)
-        else { return }
         
-        let photoViewController = PhotoViewController(image: image)
-        navigationController?.pushViewController(photoViewController, animated: true)
+        let photo = photos[indexPath.row]
+        
+        KingfisherManager.shared.retrieveImage(with: photo.url, options: [.cacheMemoryOnly]) { result in
+            switch result
+            {
+            case .failure: return
+            case .success(let image):
+                let photoViewController = PhotoViewController(image: image.image)
+                photoViewController.title = photo.camera
+                self.navigationController?.pushViewController(photoViewController, animated: true)
+            }
+        }
     }
 }

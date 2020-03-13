@@ -10,9 +10,7 @@ import Foundation
 import Moya
 
 enum NASAAPI {
-    case
-    getManifest(_ rover: String),
-    listPhotos(rover: String, camera: String, date: String, page: Int)
+    case photos(rover: String, camera: String?, date: String)
 }
 
 extension NASAAPI

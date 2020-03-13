@@ -17,31 +17,28 @@ extension NASAAPI: TargetType {
     
     var path: String {
         switch self {
-        case .getManifest(let rover):
-            return "/manifests/\(rover)&\(apiAuthKey)"
-        case .listPhotos(let rover, _, _, _):
+        case .photos(let rover, _, _):
             return "/rovers/\(rover)/photos"
         }
     }
     
     var method: Moya.Method {
-        switch self {
-        case .getManifest, .listPhotos:
-            return .get
-        }
+        return .get
     }
     
     var parameters: [String: Any] {
         switch self {
-        case .getManifest:
-            return ["api_key": apiAuthKey]
-        case .listPhotos(_, let camera, let date, let page):
-            return [
+        case .photos(_, let camera, let date):
+            var parameters = [
                 "earth_date": date,
-                "camera": camera,
-                "page": page,
                 "api_key": apiAuthKey
             ]
+            
+            if let camera = camera {
+                parameters["camera"] = camera
+            }
+            
+            return parameters
         }
     }
     
@@ -59,7 +56,7 @@ extension NASAAPI: TargetType {
     
     var task: Task {
         switch self {
-        case .getManifest, .listPhotos:
+        case .photos:
             return .requestParameters(
                 parameters: parameters,
                 encoding: URLEncoding.default

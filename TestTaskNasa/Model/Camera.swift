@@ -17,6 +17,8 @@ class Camera {
         self.description = description
     }
     
+    static let all: [Camera] = [.fhaz, .rhaz, .mast, .chemcam, .mahli, .mardi, .navcam, .pancam, .minites]
+    
     static let fhaz = Camera(name: "FHAZ", description: "Front Hazard Avoidance Camera")
     static let rhaz = Camera(name: "RHAZ", description: "Rear Hazard Avoidance Camera")
     static let mast = Camera(name: "MAST", description: "Mast Camera")
